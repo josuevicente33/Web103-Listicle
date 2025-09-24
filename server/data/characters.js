@@ -226,7 +226,7 @@ const characterData = [
     alias: "Adam Warlock",
     role: "Strategist",
     affiliations: ["Guardians of the Galaxy"],
-    image: "/images/heroes/adam-warlock.jpg",
+    image: "https://r.res.easebar.com/pic/20241120/422a024f-df1e-4bfc-ac57-00140e43c36d.png",
     description: "Cosmic support who buffs damage and rescues allies.",
     infoUrl: "https://marvelrivals.fandom.com/wiki/Adam_Warlock"
   },
@@ -237,7 +237,7 @@ const characterData = [
     alias: "Tyrone Johnson & Tandy Bowen",
     role: "Strategist",
     affiliations: ["Street-Level"],
-    image: "/images/heroes/cloak-and-dagger.jpg",
+    image: "https://r.res.easebar.com/pic/20241204/2b32f579-b80c-4da6-8085-a1d9bfb3d2bb.png",
     description: "Duo support: darkness control, teleports, and burst heals.",
     infoUrl: "https://marvelrivals.fandom.com/wiki/Cloak_%26_Dagger"
   },

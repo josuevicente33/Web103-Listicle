@@ -16,7 +16,7 @@ const renderCharacters = async () => {
             const bottomContainer = document.createElement('div')
             bottomContainer.classList.add('bottom-container')
 
-            //topContainer.style.backgroundImage = `url(${hero.image})`
+            topContainer.style.backgroundImage = `url(${hero.image})`
 
             const name = document.createElement('h3')
             name.textContent = hero.name
@@ -54,5 +54,5 @@ if (requestedUrl) {
     window.location.href = '../404.html'
 }
 else {
-    renderGifts();
+    renderCharacters();
 }
