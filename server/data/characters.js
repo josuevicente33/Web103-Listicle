@@ -264,3 +264,5 @@ const characterData = [
     infoUrl: "https://marvelrivals.fandom.com/wiki/Jeff_the_Land_Shark"
   }
 ];
+
+export default characterData;

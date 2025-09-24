@@ -16,19 +16,19 @@ const renderCharacters = async () => {
             const bottomContainer = document.createElement('div')
             bottomContainer.classList.add('bottom-container')
 
-            topContainer.style.backgroundImage = `url(${hero.image})`
+            //topContainer.style.backgroundImage = `url(${hero.image})`
 
             const name = document.createElement('h3')
             name.textContent = hero.name
             bottomContainer.appendChild(name)
 
-            const pricePoint = document.createElement('p')
-            pricePoint.textContent = 'Price: ' + hero.pricePoint
-            bottomContainer.appendChild(pricePoint)
+            // const pricePoint = document.createElement('p')
+            // pricePoint.textContent = 'Price: ' + hero.pricePoint
+            // bottomContainer.appendChild(pricePoint)
 
-            const audience = document.createElement('p')
-            audience.textContent = 'Great For: ' + hero.audience
-            bottomContainer.appendChild(audience)
+            // const audience = document.createElement('p')
+            // audience.textContent = 'Great For: ' + hero.audience
+            // bottomContainer.appendChild(audience)
 
             const link = document.createElement('a')
             link.textContent = 'Read More >'

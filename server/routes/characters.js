@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import giftData from '../data/characters.js'
+import characterData from '../data/characters.js'
 
 const __fileName = fileURLToPath(import.meta.url);
 const __dirName = path.dirname(__fileName);
@@ -9,7 +9,7 @@ const __dirName = path.dirname(__fileName);
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.status(200).json(giftData);
+    res.status(200).json(characterData);
 })
 
 router.get ('/:characterId', (req, res) => {
