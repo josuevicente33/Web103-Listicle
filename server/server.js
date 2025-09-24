@@ -6,7 +6,7 @@ const app = express();
 app.use('/public', express.static('./public'))
 app.use('/scripts', express.static('./scripts'))
 
-app.use('/characters', characterRouter);
+app.use('/characters', charactersRouter);
 
 app.get('/', (req, res) => {
     res.status(200).send('<h1 style="text-align: center; margin-top: 50px;"> Marverl Rivals Characters </h1>')
