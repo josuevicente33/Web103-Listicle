@@ -1,17 +1,20 @@
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Marvel Rivals Heroes</title>
     <link rel="icon" type="image/x-icon" href="/logo.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     <link rel="stylesheet" href="./style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="/scripts/header.js"></script>
     <script defer src="/scripts/characters.js"></script>
   </head>
   <body>
-    <header></header>
-    <!-- <div id="app"></div> -->
-    <main id ="main-content"></main>
+    <header class="header-container"></header>
+    <main class="container">
+      <div id="main-content" class="grid">
+        <!-- Character cards will be injected here by JavaScript -->
+      </div>
+    </main>
   </body>
 </html>

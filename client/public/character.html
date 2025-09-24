@@ -5,31 +5,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Gift</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     <link rel="stylesheet" href="/style.css" />
-
     <script src="/scripts/header.js" defer></script>
     <script src="/scripts/character.js" defer></script>
 </head>
 
 <body>
-    <header></header>
-    <main id="character-content" class="character-info" >
-        <div className="image-container">
-            <img id="image" src=""/>
-        </div>
-        <div className="character-details">
-            <h2 id="name"></h2>
-            <h1 id="alias"></h1>
-            <h3 id="role"></h3>
-            <p id="affiliations"></p>
-            <p id="description"></p>
-            <a id="infoUrl" href="" target="_blank">More Info</a>
-
-
-            <p id="submittedBy"></p>
-            <p id="submittedOn"></p>
-            <p id="pricePoint"></p>
-            <p id="audience"></p>
+    <header class="header-container"></header>
+    <main id="character-content" class="container" >
+        <div class="image-container">
+            <img id="image" src="" alt="">
+                <div class="character-details">
+                    <h2 id="name"></h2>
+                    <h1 id="alias"></h1>
+                    <h3 id="role"></h3>
+                    <p id="affiliations"></p>
+                    <p id="description"></p>
+                    <a id="infoUrl" href="" target="_blank" rel="noopener noreferrer">More Info</a>
+                </div>
+            </img>
         </div>
     </main>
 </body>

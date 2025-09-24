@@ -9,78 +9,91 @@
 .header-container {
     overflow: hidden;
     padding: 20px 10px;
-    padding-bottom: 60px;
     display: flex;
     flex: auto;
     justify-content: space-around;
     align-items: center;
+    background: linear-gradient(90deg, lightblue 0%, transparent 100%);
   }
 
 .header-left {
     float: left;
     display: flex;
 }
-
 .header-left img {
     padding-top: 8px;
     height: 80px;
+    background-color: gray;
+    background: transparent;
 }
 
 .header-center {
     text-align: center;
+    display: flex;
 }
-
-.header-left h1 {
+.header-center h1 {
     float: right;
     font-size: 45px;
-    
+    color: black;
 }
 
 .header-right {
     float: right;
 }
-
 .header-right button {
   background-color: white;
-  border: solid;
-  border-width: 3px;
-  border-color: rgb(3, 7, 89);
-  border-radius: 0.1rem;
-  border-radius: 16px;
-  box-sizing: border-box;
-  color:  rgb(3, 7, 89);
+  border: none;
+  
+  color:  rgb(0, 0, 0);
   cursor: pointer;
-  padding: 15px 16px;
   text-align: center;
   text-transform: uppercase;
   touch-action: manipulation;
-  width: 80px;
 }
 
 /* Home page CSS */
+#main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
 
-main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+body.home-page {
+  min-height: 100dvh;
+  background-image: url("https://www.marvelrivals.com/pc/gw/20241128194803/img/15_60863e5d.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body.character-page {
+  min-height: 100dvh;
+  background-image: url("https://www.marvelrivals.com/pc/gw/20241128194803/img/1_0fc5e9e7.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .card {
-    width: 300px;
-    height: 400px;
-    background: transparent;
+    width: 400px;
+    height: auto;
+    overflow: hidden;
+    background: white;
+    padding: 4px;
+
     border-style: solid;
     border-width: 3px;
     border-color: rgb(3, 7, 89);
     border-radius: 0.3rem;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.057);
+    box-shadow: 12px 12px 2px 1px rgba(56, 127, 221, 0.849);
     margin-top: 0px;
     margin-left: 20px;
     margin-right: 40px;
     margin-bottom: 60px;
 }
-
 .card img {
     height: 100%;
 }
@@ -89,30 +102,28 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 93.5% center;
-  height: 250px;
+  height: 300px;
 }
-
 .bottom-container {
-    margin-top:30px;
-    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    height: auto;
+    justify-content: center;
+    align-items: center;
 }
-
 .bottom-container h3 {
-    margin-top: 10px;
-    margin-bottom: 6px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: black;
 }
-
-.bottom-container p {
-    margin: 2px;
-}
-
 .bottom-container a {
-    color: rgb(228, 16, 133);
+    color: black;
+    background-color: rgb(86, 122, 189);
     text-decoration: none;
 }
 
 /* 404 Page CSS */
-
 .fof-container{
     display: table;
     width: 100%;
@@ -120,12 +131,10 @@ main {
     text-align: center;
     color: black;
 }
-
 .fof {
     display: table-cell;
     vertical-align: middle;
 }
-
 .fof h1 {
     color:rgb(26, 25, 25);
     font-size: 50px;
@@ -133,30 +142,30 @@ main {
     padding-right: 12px;
     animation: type .6s alternate infinite;
 }
-
 @keyframes type {
     from {box-shadow: inset -3px 0px 0px #888;}
     to {box-shadow: inset -3px 0px 0px transparent;}
 }
 
 /* Detail Page CSS*/
-
-.gift-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+#character-content { 
+  display: block;
+  margin: 0 auto;
 }
-
-.image-container {
-    padding-left: 100px;
-    width: 40vw;
+.image-container { 
+  position: relative; 
+  overflow: hidden; 
 }
-
-.image-container img {
-    width: 80%;
+.image-container img { 
+  display: block; 
+  width: 100%; 
+  height: auto;   
 }
-
-.gift-details {
-    width: 45vw;
+.character-details {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: min(42ch, 38%);
+  display: flex; flex-direction: column; justify-content: center;
+  gap: .35rem; padding: 1rem 1.25rem; color: #fff; z-index: 1;
+  background: linear-gradient(90deg, rgba(0,0,0,.65) 0%, rgba(0,0,0,.45) 60%, rgba(0,0,0,0) 100%);
 }
