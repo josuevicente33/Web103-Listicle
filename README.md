@@ -27,6 +27,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [X] The site has decorated background provided by the Marvel Rivals Gallery.
+- [X] The site will link each character to their respective Wiki Page for more information.
 
 ## Video Walkthrough
 
@@ -34,22 +35,18 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='Web103 Part 1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  Add GIF tool here
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
+GIF created with ...
 [ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+One of the biggest issues I faced was the styling of the website and I don't think I got to the point that I wanted. Understanding PicoCss was a challenge but I think I was able to overcome it and use it as my advantage. I was unware that is provided its own styles as I thought it was more like tailwind. I was able to utilize PicoCss for their containers, grids, and buttons. Overall, the project was very useful with many moving parts, and I had fun with it.
 
 ## License
 
-Copyright [yyyy] [name of copyright owner]
+Copyright [2025] [Josue Vicente]
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
