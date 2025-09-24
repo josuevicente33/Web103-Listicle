@@ -8,16 +8,17 @@ headerLeft.className = 'header-left';
 
 const logo = document.createElement('img');
 logo.src = '/logo.png';
+headerLeft.appendChild(logo);
+
+const headerCenter = document.createElement('div');
+headerCenter.className = 'header-center';
 
 const headerTitle = document.createElement('h1');
-headerTitle.textContent = 'Marvel Rivals Characters';
-
-headerLeft.appendChild(logo);
-headerLeft.appendChild(headerTitle);
+headerTitle.textContent = 'My Main Marvel Rivals Heroes';
+headerCenter.appendChild(headerTitle);
 
 const headerRight = document.createElement('div');
 headerRight.className = 'header-right';
-
 const headerButton = document.createElement('Home');
 headerButton.textContent = 'Home';
 
@@ -27,7 +28,9 @@ headerButton.addEventListener('click', function handleClick(event) {
 
 headerRight.appendChild(headerButton);
 
+    
 headerContainer.appendChild(headerLeft);
+headerContainer.appendChild(headerCenter);
 headerContainer.appendChild(headerRight);
 
 header.appendChild(headerContainer);

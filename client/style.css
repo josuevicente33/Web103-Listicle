@@ -10,17 +10,24 @@
     overflow: hidden;
     padding: 20px 10px;
     padding-bottom: 60px;
+    display: flex;
+    flex: auto;
+    justify-content: space-around;
+    align-items: center;
   }
 
 .header-left {
     float: left;
-    height: 100px;
-    width: 310px;
+    display: flex;
 }
 
 .header-left img {
     padding-top: 8px;
     height: 80px;
+}
+
+.header-center {
+    text-align: center;
 }
 
 .header-left h1 {
@@ -31,8 +38,6 @@
 
 .header-right {
     float: right;
-    padding-top:30px;
-    padding-right:10px;
 }
 
 .header-right button {
