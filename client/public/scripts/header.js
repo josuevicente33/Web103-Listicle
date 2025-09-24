@@ -23,7 +23,7 @@ headerCenter.appendChild(headerTitle);
 const headerRight = document.createElement('div');
 headerRight.className = 'header-right';
 const headerButton = document.createElement('button');
-headerButton.textContent = 'Home';
+headerButton.textContent = 'Heroes List';
 
 headerButton.setAttribute('role', 'button');
 headerButton.addEventListener('click', function handleClick(event) {
