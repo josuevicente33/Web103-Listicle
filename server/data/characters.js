@@ -1,268 +1,103 @@
 const characterData = [
-  {
-    id: 1,
-    slug: "hulk",
-    name: "Hulk",
-    alias: "Bruce Banner",
-    role: "Vanguard",
-    affiliations: ["Avengers"],
-    image: "/images/heroes/hulk.jpg",
-    description: "Smashes through frontlines with huge health and crowd control.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Hulk"
-  },
-  {
-    id: 2,
-    slug: "captain-america",
-    name: "Captain America",
-    alias: "Steve Rogers",
-    role: "Vanguard",
-    affiliations: ["Avengers"],
-    image: "/images/heroes/captain-america.jpg",
-    description: "Shield-bearing leader who protects teammates and anchors objectives.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Captain_America"
-  },
-  {
-    id: 3,
-    slug: "magneto",
-    name: "Magneto",
-    alias: "Erik Lehnsherr",
-    role: "Vanguard",
-    affiliations: ["X-Men", "Brotherhood"],
-    image: "/images/heroes/magneto.jpg",
-    description: "Metal-bending tank that controls space with barriers and pulls.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Magneto"
-  },
-  {
-    id: 4,
-    slug: "peni-parker",
-    name: "Peni Parker",
-    alias: "Peni Parker",
-    role: "Vanguard",
-    affiliations: ["Spider-Verse"],
-    image: "/images/heroes/peni-parker.jpg",
-    description: "SP//dr mech sets traps and fortifies points with webs and drones.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Peni_Parker"
-  },
-  {
-    id: 5,
-    slug: "the-thing",
-    name: "The Thing",
-    alias: "Ben Grimm",
-    role: "Vanguard",
-    affiliations: ["Fantastic Four"],
-    image: "/images/heroes/the-thing.jpg",
-    description: "Rock-solid brawler with peel and displacement to guard allies.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/The_Thing"
-  },
-  {
-    id: 6,
-    slug: "thor",
-    name: "Thor",
-    alias: "Thor Odinson",
-    role: "Vanguard",
-    affiliations: ["Avengers", "Asgard"],
-    image: "/images/heroes/thor.jpg",
-    description: "Hammer-throwing frontliner with burst, stuns, and team auras.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Thor"
-  },
-  {
-    id: 7,
-    slug: "iron-man",
-    name: "Iron Man",
-    alias: "Tony Stark",
-    role: "Duelist",
-    affiliations: ["Avengers"],
-    image: "/images/heroes/iron-man.jpg",
-    description: "Mobile ranged DPS who pokes with repulsors and secures picks.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Iron_Man"
-  },
-  {
-    id: 8,
-    slug: "spider-man",
-    name: "Spider-Man",
-    alias: "Peter Parker",
-    role: "Duelist",
-    affiliations: ["Avengers", "Spider-Verse"],
-    image: "/images/heroes/spider-man.jpg",
-    description: "Web-slinging flanker with pulls, stuns, and high mobility.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Spider-Man"
-  },
-  {
-    id: 9,
-    slug: "wolverine",
-    name: "Wolverine",
-    alias: "Logan",
-    role: "Duelist",
-    affiliations: ["X-Men"],
-    image: "/images/heroes/wolverine.jpg",
-    description: "Ferocious dive DPS with sustain and lethal gap-closing.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Wolverine"
-  },
-  {
-    id: 10,
-    slug: "storm",
-    name: "Storm",
-    alias: "Ororo Munroe",
-    role: "Duelist",
-    affiliations: ["X-Men"],
-    image: "/images/heroes/storm.jpg",
-    description: "Storm-rider with aerial control, zoning, and team speed boosts.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Storm"
-  },
-  {
-    id: 11,
-    slug: "hela",
-    name: "Hela",
-    alias: "Hela",
-    role: "Duelist",
-    affiliations: ["Asgard"],
-    image: "/images/heroes/hela.jpg",
-    description: "Long-range sorceress who snipes, drains, and commands the dead.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Hela"
-  },
-  {
-    id: 12,
-    slug: "black-widow",
-    name: "Black Widow",
-    alias: "Natasha Romanoff",
-    role: "Duelist",
-    affiliations: ["Avengers"],
-    image: "/images/heroes/black-widow.jpg",
-    description: "Stealthy skirmisher with gadgets and burst pick potential.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Black_Widow"
-  },
-  {
-    id: 13,
-    slug: "hawkeye",
-    name: "Hawkeye",
-    alias: "Clint Barton",
-    role: "Duelist",
-    affiliations: ["Avengers"],
-    image: "/images/heroes/hawkeye.jpg",
-    description: "Precision archer: utility arrows plus consistent poke damage.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Hawkeye"
-  },
-  {
-    id: 14,
-    slug: "punisher",
-    name: "The Punisher",
-    alias: "Frank Castle",
-    role: "Duelist",
-    affiliations: ["Street-Level"],
-    image: "/images/heroes/punisher.jpg",
-    description: "Hard-hitting gunner who excels at picks and lane control.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/The_Punisher"
-  },
-  {
-    id: 15,
-    slug: "phoenix",
-    name: "Phoenix",
-    alias: "Jean Grey",
-    role: "Duelist",
-    affiliations: ["X-Men"],
-    image: "/images/heroes/phoenix.jpg",
-    description: "Fiery AoE duelist with mobility, telekinesis, and combos.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Phoenix"
-  },
-  {
-    id: 16,
-    slug: "magik",
-    name: "Magik",
-    alias: "Illyana Rasputina",
-    role: "Duelist",
-    affiliations: ["X-Men"],
-    image: "/images/heroes/magik.jpg",
-    description: "Portal-hopping blade duelist with burst and battlefield control.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Magik"
-  },
-  {
-    id: 17,
-    slug: "loki",
-    name: "Loki",
-    alias: "Loki Laufeyson",
-    role: "Strategist",
-    affiliations: ["Asgard"],
-    image: "/images/heroes/loki.jpg",
-    description: "Illusionist support who heals, deceives, and sets up picks.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Loki"
-  },
-  {
-    id: 18,
-    slug: "luna-snow",
-    name: "Luna Snow",
-    alias: "Seol Hee",
-    role: "Strategist",
-    affiliations: ["Agents of Atlas"],
-    image: "/images/heroes/luna-snow.jpg",
-    description: "Pop idol with massive healing zones and team utility.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Luna_Snow"
-  },
-  {
-    id: 19,
-    slug: "mantis",
-    name: "Mantis",
-    alias: "Mantis",
-    role: "Strategist",
-    affiliations: ["Guardians of the Galaxy"],
-    image: "/images/heroes/mantis.jpg",
-    description: "Empathic support with strong heals and clutch disables.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Mantis"
-  },
-  {
-    id: 20,
-    slug: "invisible-woman",
-    name: "Invisible Woman",
-    alias: "Susan Storm Richards",
-    role: "Strategist",
-    affiliations: ["Fantastic Four"],
-    image: "/images/heroes/invisible-woman.jpg",
-    description: "Shields, barriers, and crowd control to enable her team.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Invisible_Woman"
-  },
-  {
-    id: 21,
-    slug: "adam-warlock",
-    name: "Adam Warlock",
-    alias: "Adam Warlock",
-    role: "Strategist",
-    affiliations: ["Guardians of the Galaxy"],
-    image: "https://r.res.easebar.com/pic/20241120/422a024f-df1e-4bfc-ac57-00140e43c36d.png",
-    description: "Cosmic support who buffs damage and rescues allies.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Adam_Warlock"
-  },
-  {
-    id: 22,
-    slug: "cloak-and-dagger",
-    name: "Cloak & Dagger",
-    alias: "Tyrone Johnson & Tandy Bowen",
-    role: "Strategist",
-    affiliations: ["Street-Level"],
-    image: "https://r.res.easebar.com/pic/20241204/2b32f579-b80c-4da6-8085-a1d9bfb3d2bb.png",
-    description: "Duo support: darkness control, teleports, and burst heals.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Cloak_%26_Dagger"
-  },
-  {
-    id: 23,
-    slug: "rocket-raccoon",
-    name: "Rocket Raccoon",
-    alias: "Rocket Raccoon",
-    role: "Strategist",
-    affiliations: ["Guardians of the Galaxy"],
-    image: "/images/heroes/rocket-raccoon.jpg",
-    description: "Techy support with bouncing heals, revives, and poke.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Rocket_Raccoon"
-  },
-  {
-    id: 24,
-    slug: "jeff-the-land-shark",
-    name: "Jeff the Land Shark",
-    alias: "Jeff",
-    role: "Strategist",
-    affiliations: ["Avengers (adjacent)"],
-    image: "/images/heroes/jeff.jpg",
-    description: "Adorable healer with beams, bubbles, and sneaky mobility.",
-    infoUrl: "https://marvelrivals.fandom.com/wiki/Jeff_the_Land_Shark"
-  }
+    {
+        id: 1,
+        slug: "thor",
+        name: "Thor",
+        alias: "Thor Odinson",
+        role: "Vanguard",
+        affiliations: ["Avengers", "Asgard"],
+        image: "https://r.res.easebar.com/pic/20241120/e83e03a6-0dee-4897-a081-0715c30716f3.png",
+        description: "Hammer-throwing frontliner with burst, stuns, and team auras.",
+        infoUrl: "https://marvelrivals.fandom.com/wiki/Thor"
+    },
+    {
+        id: 2,
+        slug: "storm",
+        name: "Storm",
+        alias: "Ororo Munroe",
+        role: "Duelist",
+        affiliations: ["X-Men"],
+        image: "https://r.res.easebar.com/pic/20250402/8642a4ab-b4ee-4c7d-9a90-6c3ee5ccef7e.png",
+        description: "Storm-rider with aerial control, zoning, and team speed boosts.",
+        infoUrl: "https://marvelrivals.fandom.com/wiki/Storm"
+    },
+    {
+        id: 3,
+        slug: "hela",
+        name: "Hela",
+        alias: "Hela",
+        role: "Duelist",
+        affiliations: ["Asgard"],
+        image: "https://r.res.easebar.com/pic/20241120/843f32d6-0958-4564-85dc-aa9d5d358892.png",
+        description: "Long-range sorceress who snipes, drains, and commands the dead.",
+        infoUrl: "https://marvelrivals.fandom.com/wiki/Hela"
+    },
+    {
+        id: 4,
+        slug: "punisher",
+        name: "The Punisher",
+        alias: "Frank Castle",
+        role: "Duelist",
+        affiliations: ["Street-Level"],
+        image: "https://r.res.easebar.com/pic/20241120/7a1b0850-dd49-4ffc-9b8f-deedabbe673e.png",
+        description: "Hard-hitting gunner who excels at picks and lane control.",
+        infoUrl: "https://marvelrivals.fandom.com/wiki/The_Punisher"
+    },
+    {
+        id: 5,
+        slug: "phoenix",
+        name: "Phoenix",
+        alias: "Jean Grey",
+        role: "Duelist",
+        affiliations: ["X-Men"],
+        image: "https://r.res.easebar.com/pic/20250709/430d5c74-595c-4e9f-9c2b-389af77c2abe.png",
+        description: "Fiery AoE duelist with mobility, telekinesis, and combos.",
+        infoUrl: "https://marvelrivals.fandom.com/wiki/Phoenix"
+    },
+    {
+        id: 6,
+        slug: "luna-snow",
+        name: "Luna Snow",
+        alias: "Seol Hee",
+        role: "Strategist",
+        affiliations: ["Agents of Atlas"],
+        image: "https://r.res.easebar.com/pic/20241118/6a008656-26f5-492e-87a1-7a2c5bd9adf1.png",
+        description: "Pop idol with massive healing zones and team utility.",
+        infoUrl: "https://marvelrivals.fandom.com/wiki/Luna_Snow"
+    },
+    {
+        id: 7,
+        slug: "doctor-strange",
+        name: "Doctor Strange",
+        alias: "Stephen Strange",
+        role: "Vanguard",
+        affiliations: ["Avengers", "Masters of the Mystic Arts"],
+        image: "https://r.res.easebar.com/pic/20241120/8e494e06-c958-44ab-bbaf-a3c061428927.png",
+        description: "Master of the mystic arts: heals, shields, and crowd control.",
+        infoUrl: "https://marvelrivals.fandom.com/wiki/Doctor_Strange"
+    },
+    {
+        id: 8,
+        slug: "emma-frost",
+        name: "Emma Frost",
+        alias: "Emma Frost",
+        role: "Vanguard",
+        affiliations: ["X-Men"],
+        image: "https://r.res.easebar.com/pic/20250408/ad5870eb-ceef-415a-b1fb-a325f21131d6.png",
+        description: "Diamond-hard duelist with strong sustain and burst damage.",
+        infoUrl: "https://marvelrivals.fandom.com/wiki/Emma_Frost"
+    },
+    {
+        id: 9,
+        slug: "groot",
+        name: "Groot",
+        alias: "Groot",
+        role: "Vanguard",
+        affiliations: ["Guardians of the Galaxy"],
+        image: "https://r.res.easebar.com/pic/20241120/560d50f4-e95b-4e16-9665-d11d50ff5f95.png",
+        description: "Floral tank with peel, crowd control, and team healing.",
+        infoUrl: "https://marvelrivals.fandom.com/wiki/Groot"
+    }
 ];
 
 export default characterData;
