@@ -8,23 +8,20 @@ const renderCharacter = async () => {
     hero = data.find(hero => hero.id === requestedID)
 
     if (hero) {
+        document.body.classList.add('character-page')
+
         document.getElementById('image').src = hero.image
-        document.getElementById('name').textContent = hero.name
-        document.getElementById('alias').textContent = hero.alias
+        document.getElementById('name').textContent = 'Name: ' + hero.name
+        document.getElementById('alias').textContent = 'Alias: ' + hero.alias
         document.getElementById('role').textContent = 'Role: ' + hero.role
         document.getElementById('affiliations').textContent = 'Affiliations: ' + hero.affiliations.join(', ')
         document.getElementById('infoUrl').setAttribute('href', hero.infoUrl)
         document.getElementById('infoUrl').setAttribute('target', '_blank')
-
-        // document.getElementById('submittedBy').textContent = 'Submitted by: ' + hero.submittedBy
-        // document.getElementById('pricePoint').textContent = 'Price: ' + hero.pricePoint
-        // document.getElementById('audience').textContent = 'Great For: ' + hero.audience
-        // document.getElementById('description').textContent = hero.description
-        document.title = `UnEarthed - ${hero.name}`
+        document.title = `Hero - ${hero.name}`
     }
     else {
         const message = document.createElement('h2')
-        message.textContent = 'No Characters Available 😞'
+        message.textContent = 'No Character Available 😞'
         characterContent.appendChild(message)
     }
 }

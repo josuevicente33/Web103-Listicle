@@ -35,6 +35,8 @@
     float: right;
     font-size: 45px;
     color: black;
+    text-shadow: 2px 2px 4px #2456fd;
+    margin: 0;
 }
 
 .header-right {

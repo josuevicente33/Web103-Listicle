@@ -4,6 +4,7 @@ const renderCharacters = async () => {
     console.log(data)
 
     const mainContent = document.getElementById('main-content');
+    document.body.classList.add('home-page');
 
     if (data) {
         data.map(hero => {
@@ -21,14 +22,6 @@ const renderCharacters = async () => {
             const name = document.createElement('h3')
             name.textContent = hero.name
             bottomContainer.appendChild(name)
-
-            // const pricePoint = document.createElement('p')
-            // pricePoint.textContent = 'Price: ' + hero.pricePoint
-            // bottomContainer.appendChild(pricePoint)
-
-            // const audience = document.createElement('p')
-            // audience.textContent = 'Great For: ' + hero.audience
-            // bottomContainer.appendChild(audience)
 
             const link = document.createElement('a')
             link.textContent = 'Read More >'

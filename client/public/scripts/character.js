@@ -11,8 +11,8 @@ const renderCharacter = async () => {
         document.body.classList.add('character-page')
 
         document.getElementById('image').src = hero.image
-        document.getElementById('name').textContent = hero.name
-        document.getElementById('alias').textContent = hero.alias
+        document.getElementById('name').textContent = 'Name: ' + hero.name
+        document.getElementById('alias').textContent = 'Alias: ' + hero.alias
         document.getElementById('role').textContent = 'Role: ' + hero.role
         document.getElementById('affiliations').textContent = 'Affiliations: ' + hero.affiliations.join(', ')
         document.getElementById('infoUrl').setAttribute('href', hero.infoUrl)
