@@ -194,3 +194,16 @@ body.character-page {
   gap: .35rem; padding: 1rem 1.25rem; color: #fff; z-index: 1;
   background: linear-gradient(90deg, rgba(0,0,0,.65) 0%, rgba(0,0,0,.45) 60%, rgba(0,0,0,0) 100%);
 }
+
+.add-character-fab {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1000;
+  border: 2px solid rgb(3,7,89);
+  color: rgb(3,7,89);
+  background: #fff;
+}
+@media (max-width: 768px){
+  .add-character-fab { left: .75rem; bottom: .75rem; }
+}

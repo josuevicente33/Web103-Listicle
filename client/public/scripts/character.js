@@ -17,6 +17,7 @@ const renderCharacter = async () => {
         document.getElementById('affiliations').textContent = 'Affiliations: ' + hero.affiliations.join(', ')
         document.getElementById('infoUrl').setAttribute('href', hero.infoUrl)
         document.getElementById('infoUrl').setAttribute('target', '_blank')
+        document.getElementById('description').textContent = hero.description
         document.title = `Hero - ${hero.name}`
     }
     else {
