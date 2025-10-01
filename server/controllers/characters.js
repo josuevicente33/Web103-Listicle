@@ -2,7 +2,7 @@ import { pool } from '../config/database.js';
 
 export const getAllCharacters = async (req, res) => {
     try { 
-        const gifts = await pool.query('SELECT * FROM characters');
+        const gifts = await pool.query('SELECT * FROM characters ORDER BY id ASC');
         res.status(200).json(gifts.rows);
     } catch (error) {
         console.error('Error fetching characters:', error);

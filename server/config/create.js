@@ -2,8 +2,7 @@ import pool from './database.js';
 
 import dotenv from './dotenv.js';
 
-import characterData from '../data/characters.json'
-
+import characterData from '../data/characters.js'
 const createCharacterTable = async () => {
     const createTableQuery = `
     DROP TABLE IF EXISTS characters;
@@ -33,12 +32,11 @@ const insertCharacterData = async () => {
 
     characterData.forEach((character) => {
         const insertQuery = `
-        INSERT INTO characters (id, name, slug, alias, role, affiliations, image, description, infoUrl)
-        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
-        ON CONFLICT (id) DO NOTHING;
+        INSERT INTO characters (name, slug, alias, role, affiliations, image, description, infoUrl)
+        VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+        ON CONFLICT (slug) DO NOTHING;
         `;
         const values = [
-            character.id,
             character.name,
             character.slug,
             character.alias,
