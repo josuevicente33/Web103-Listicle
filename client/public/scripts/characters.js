@@ -121,6 +121,22 @@ function makeHeroCard(hero) {
     link.href = `/characters/${hero.id}`
     bottomContainer.appendChild(link)
 
+    const deleteLink = document.createElement('button')
+    deleteLink.textContent = 'Delete'
+    deleteLink.classList.add('delete-link')
+    deleteLink.addEventListener('click', async (e) => {
+        e.preventDefault();
+        if (!confirm(`Are you sure you want to delete ${hero.name}?`)) return;
+        const res = await fetch(`/characters/${hero.id}`, { method: 'DELETE' });
+        if (!res.ok) {
+            alert('Failed to delete character');
+            return;
+        }
+        card.remove();
+    });
+    bottomContainer.appendChild(deleteLink)
+
+
     card.appendChild(topContainer)
     card.appendChild(bottomContainer)
     return card;

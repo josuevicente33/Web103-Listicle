@@ -207,3 +207,19 @@ body.character-page {
 @media (max-width: 768px){
   .add-character-fab { left: .75rem; bottom: .75rem; }
 }
+
+.delete-link{
+  background-color: rgb(255, 100, 100);
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  font-size: 16px;
+  font-weight: 600;
+  
+  color:  rgb(0, 0, 0);
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+}
