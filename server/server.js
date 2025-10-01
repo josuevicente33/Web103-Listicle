@@ -3,6 +3,7 @@ import charactersRouter from './routes/characters.js'
 import dotenv from 'dotenv';
 
 const app = express();
+app.use(express.json());
 
 app.use('/public', express.static('./public'))
 app.use('/scripts', express.static('./scripts'))

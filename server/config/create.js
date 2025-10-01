@@ -1,15 +1,14 @@
 import pool from './database.js';
-
 import dotenv from './dotenv.js';
-
 import characterData from '../data/characters.js'
+
 const createCharacterTable = async () => {
     const createTableQuery = `
     DROP TABLE IF EXISTS characters;
 
     CREATE TABLE IF NOT EXISTS characters (
         id SERIAL PRIMARY KEY,
-        name VARCHAR(100) NOT NULL,
+        name VARCHAR(100) NOT NULL UNIQUE,
         slug VARCHAR(100) UNIQUE NOT NULL,
         alias VARCHAR(100),
         role VARCHAR(50),
